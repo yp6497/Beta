@@ -12,7 +12,7 @@ public class User {
     private boolean priorityOn;
     private boolean disabled;
     private boolean willPay;
-    private ArrayList<Integer> area;
+    private ArrayList<Integer> area; //
 
     public User() {}
 
