@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Beta">
         <activity
+            android:name=".Priority"
+            android:exported="false" />
+        <activity
             android:name=".Main"
             android:exported="false" />
         <activity

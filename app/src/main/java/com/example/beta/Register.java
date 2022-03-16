@@ -21,6 +21,7 @@ public class Register extends AppCompatActivity {
     String emailS, passwordS;
     FirebaseAuth mAuth;
     ProgressBar progressBar_ma;
+    //boolean stayConnect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +73,7 @@ public class Register extends AppCompatActivity {
 
     public void success(){
 
-        Intent si = new Intent(this, SignIn.class);
+        Intent si = new Intent(this, Main.class);
         startActivity(si);
     }
 
@@ -81,4 +82,12 @@ public class Register extends AppCompatActivity {
         Intent i = new Intent(this, SignIn.class);
         startActivity(i);
     }
+
+    /*
+    public void stayconnect(View view) {
+
+        stayConnect=true;
+    }
+
+     */
 }

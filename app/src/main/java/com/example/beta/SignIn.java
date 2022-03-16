@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -22,20 +23,29 @@ public class SignIn extends AppCompatActivity {
     String emailS, passwordS;
     FirebaseAuth mAuth;
     ProgressBar progressBar_ma;
-
+    //boolean stayConnect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        et_mail= (EditText) findViewById(R.id.et_email);
-        et_password= (EditText) findViewById(R.id.et_password);
-        mAuth= FirebaseAuth.getInstance();
+        et_mail = (EditText) findViewById(R.id.et_email);
+        et_password = (EditText) findViewById(R.id.et_password);
+        mAuth = FirebaseAuth.getInstance();
 
-        progressBar_ma=(ProgressBar) findViewById(R.id.progressBar_ma);
+        progressBar_ma = (ProgressBar) findViewById(R.id.progressBar_ma);
         progressBar_ma.setVisibility(View.INVISIBLE);
 
+        /*
+        SharedPreferences settings = getSharedPreferences("PREFS_NAME", MODE_PRIVATE);
+        Boolean isChecked = settings.getBoolean("stayConnect", false);
+        Intent si = new Intent(SignIn.this, Main.class);
+        if (mAuth.getCurrentUser() != null && isChecked) {
+            stayConnect = true;
+            startActivity(si);
+        }
+         */
     }
 
     public void signIn(View view) {
@@ -73,9 +83,21 @@ public class SignIn extends AppCompatActivity {
         }
     }
 
+
     public void success(){
 
         Intent si = new Intent(this, Main.class);
         startActivity(si);
     }
+
+    /**
+     * On activity Pause- If logged in & asked to be remembered- kill activity.
+     */
+    /*
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (stayConnect) finish();
+    }
+     */
 }

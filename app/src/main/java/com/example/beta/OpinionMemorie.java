@@ -66,4 +66,14 @@ public class OpinionMemorie {
         this.image=image;
     }
 
+    @Override
+    public String toString(){
+        return "User{" +
+                "userName=" +userName+""+
+                ",date="+date+""+
+                ",image="+image+""+
+                ",description="+description+""+
+                ",grade="+grade+"";
+    }
+
 }

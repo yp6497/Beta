@@ -1,5 +1,9 @@
 package com.example.beta;
 
+import static com.example.beta.FBref.refUser;
+
+import com.google.firebase.database.DataSnapshot;
+
 import java.util.ArrayList;
 
 public class User {
@@ -12,7 +16,7 @@ public class User {
     private boolean priorityOn;
     private boolean disabled;
     private boolean willPay;
-    private ArrayList<Integer> area; //
+    private ArrayList<Integer> area;
 
     public User() {}
 
@@ -82,6 +86,17 @@ public class User {
 
     public void setArea(ArrayList<Integer> area){
         this.area=area;
+    }
+
+    @Override
+    public String toString(){
+        return "User{" +
+                "uid=" + uid+""+
+                ",userName="+userName+""+
+                ",age="+age+""+
+                ",priorityOn="+priorityOn+""+
+                ",disabled="+disabled+""+
+                ",willPay="+willPay+"";
     }
 }
 

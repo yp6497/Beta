@@ -154,4 +154,26 @@ public class Place {
     public void setImages(ArrayList<String> images){
         this.images=images;
     }
+
+    @Override
+    public String toString(){
+        return "User{" +
+                "placeName=" +placeName+""+
+                ",adrress="+adrress+""+
+                ",payment="+payment+""+
+                ",price="+price+""+
+                ",star="+star+""+
+                ",favorite="+favorite+""+
+                ",age="+age+""+
+                ",season="+season+""+
+                ",area="+area+""+
+                ",forFamily="+forFamily+""+
+                ",forFamily="+forFamily+""+
+                ",forDisabled="+forDisabled+""+
+                ",placeKind="+placeKind+""+
+                ",description="+description+""+
+                ",images="+images+"";
+
+
+    }
 }

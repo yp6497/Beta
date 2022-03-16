@@ -11,7 +11,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="148dp" />
+        android:layout_height="114dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -64,12 +64,25 @@
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="197dp" />
+        android:layout_height="183dp" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="signInScreen"
         android:text="Sign in with an account" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="match_parent"
+        android:layout_height="41dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:onClick="stayconnect"
+        android:text="sc" />
 
 </LinearLayout>
